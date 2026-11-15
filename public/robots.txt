@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://clinical-quality-artifical-intelligence.github.io/clinyqai-website/sitemap.xml
