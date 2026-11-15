@@ -35,3 +35,5 @@ The build tests check prerendered content, metadata, in-page anchors, generated 
 ## Rights
 
 No licence to reuse ClinyQAi branding, website copy or the linked handbook is granted by publication of this repository. The handbook is hosted separately; this website links to it and does not distribute its contents.
+
+The public page omits registration details and repository links at the owner�s request. Solutions emphasise healthcare teams and education, with direct enquiry and handbook pathways.
