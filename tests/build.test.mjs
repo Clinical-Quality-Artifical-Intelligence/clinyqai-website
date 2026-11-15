@@ -8,8 +8,7 @@ test('production HTML contains accessible, prerendered content and correct metad
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
   assert.match(html, /<html lang="en-GB"/);
   assert.match(html, /<main id="main"/);
-  assert.match(html, /17155505/);
-  assert.match(html, /Registered in England and Wales/);
+  assert.doesNotMatch(html, /17155505|Company register|github\.com|github\.io/i);
   assert.match(html, /rel="canonical"/);
   assert.doesNotMatch(html, /<!--app-html-->/);
   assert.doesNotMatch(html, /Lincoln Gombedza|founder|certified|endorsed/i);
