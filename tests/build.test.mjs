@@ -19,9 +19,9 @@ test('production HTML contains accessible, prerendered content and correct metad
 test('navigation targets resolve and production asset paths exist under the Pages base', async () => {
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]));
   for (const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(match[1]), `Missing anchor: ${match[1]}`);
-  const assets = [...html.matchAll(/(?:src|href)="(\/clinyqai-website\/[^"#]+)"/g)];
+  const assets = [...html.matchAll(/(?:src|href)="(\/[^"#]+)"/g)];
   assert.ok(assets.length >= 4);
-  for (const [, path] of assets) await access(new URL(`../dist/${path.replace('/clinyqai-website/', '')}`, import.meta.url));
+  for (const [, path] of assets) await access(new URL(`../dist/${path.slice(1)}`, import.meta.url));
   assert.match(html, /href="https:\/\/handbook.nursingcitizendevelopment.com\/"/);
   assert.match(html, /href="https:\/\/calendar.app.google\/8PfmvNcuPvxY9pPi6"/);
   assert.match(html, /href="mailto:lincoln@clinyqai.com"/);

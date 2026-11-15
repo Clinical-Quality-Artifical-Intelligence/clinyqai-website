@@ -2,19 +2,19 @@
 
 Responsive React and Vite website, deployed by GitHub Actions to GitHub Pages.
 
-Website: https://clinical-quality-artifical-intelligence.github.io/clinyqai-website/
+Website: https://clinyqai.com/
 
 ## Development
 
 Use Node.js 24 and npm. Run `npm ci`, then `npm run dev`.
 
-Run `npm run build` and `npm test` to check the production output. `npm run preview` serves the production build at `/clinyqai-website/`.
+Run `npm run build` and `npm test` to check the production output. `npm run preview` serves the production build at `/`.
 
 ## Deployment
 
 Repository Settings → Pages → Build and deployment → Source must be **GitHub Actions**. Pull requests build and test without deployment. Merging into `main` builds, prerenders, checks and deploys `dist/`. The workflow can also be started manually. Actions are pinned to verified release commit SHAs; deployment permissions are limited to the deploy job.
 
-The Vite base, canonical URL, social metadata and sitemap target this repository's Pages URL. Update all of these together if moving to a custom domain. No custom domain or DNS settings are configured by this project.
+The Vite base, canonical URL, social metadata and sitemap target https://clinyqai.com/. GitHub Pages uses clinyqai.com as its custom domain. Cloudflare DNS points the apex to the four GitHub Pages A addresses and www to clinical-quality-artifical-intelligence.github.io, using DNS-only records.
 
 ## Content and assets
 
